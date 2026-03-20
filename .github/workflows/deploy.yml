@@ -33,7 +33,9 @@ jobs:
 
       # ✅ NEW STEP (separate)
       - name: Update kubeconfig
-        run: aws eks update-kubeconfig \
+        run: |
+          aws --version
+          aws eks update-kubeconfig \
               --region ${{ secrets.AWS_REGION }} \
               --name ${{ secrets.EKS_CLUSTER }}
 
