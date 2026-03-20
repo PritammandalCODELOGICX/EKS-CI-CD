@@ -15,6 +15,6 @@ spec:
       spec:
       containers:
         - name: simple-eks-app-container
-          image: 536322508049.dkr.ecr.eu-north-1.amazonaws.com/my-ecr-image:4
+          image: 585853585762.dkr.ecr.eu-north-1.amazonaws.com/eks-demo-repo
           ports:
             - containerPort: 80
