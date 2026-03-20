@@ -1,20 +1,20 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: simple-eks-app # Name of your deployment
+  name: node-app # Name of your deployment
 spec:
   replicas: 2 # Desired number of application instances
   selector:
     matchLabels:
-      app: simple-eks-app
+      app: node-app
   template:
     metadata:
       labels:
-        app: simple-eks-app
+        app: node-app
     spec:
       spec:
       containers:
         - name: simple-eks-app-container
           image: 585853585762.dkr.ecr.eu-north-1.amazonaws.com/eks-demo-repo
           ports:
-            - containerPort: 80
+            - containerPort: 3000
